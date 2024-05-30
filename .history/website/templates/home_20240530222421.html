@@ -1,0 +1,16 @@
+{%extends "index.html" %} {% block title %}  {{title}} {% endblock %} 
+
+{% block content %}
+
+<form method="post" class="m-5">
+    <div class="mb-3 mt-5">
+        <div class="">
+            <h3>NOTES</h3>
+        </div>
+      <!-- <label for="email" class="form-label">Email</label> -->
+      <textarea class="form-control" id="note" name="note" placeholder="Add your Notes">
+    </div>  
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </form>
+
+{% endblock %}

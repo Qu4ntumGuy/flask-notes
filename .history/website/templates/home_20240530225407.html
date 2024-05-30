@@ -1,0 +1,25 @@
+{%extends "index.html" %} {% block title %}  {{title}} {% endblock %} 
+
+{% block content %}
+<div align="center" class="mt-5">
+    <h3>NOTES</h3>
+</div>
+<ul class="list-group list-group-flush" id="notes">
+    {%for notes in user.notes%}
+    <li class="list-group-item">{{notes.data}}
+        <button type="button" class="btn-close" onclick="({{deleteNote(note.id)}})"> 
+        </button>
+    </li>
+    {%endfor%}
+</ul>
+<form method="post" class="m-5">
+    <div class="mb-3 mt-5">
+      <!-- <label for="email" class="form-label">Email</label> -->
+      <textarea class="form-control" id="note" name="note" placeholder="Add your Notes"></textarea>
+    </div> 
+    <center>
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </center> 
+  </form>
+
+{% endblock %}

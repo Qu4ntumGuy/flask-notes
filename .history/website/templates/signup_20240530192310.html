@@ -1,0 +1,30 @@
+{%extends "index.html" %} {% block title %} Sign Up {% endblock %} 
+
+{% block content %}
+<form method="post">
+    <div>
+        Create an account
+    </div>
+    <div class="mb-3 mt-5">
+      <!-- <label for="email" class="form-label">Email</label> -->
+      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="Enter your email">
+    </div>
+    <div class="mb-3">
+        <!-- <label for="firstName" class="form-label">First Name</label> -->
+        <input type="text" class="form-control" id="firstName" aria-describedby="emailHelp" name="firstName" placeholder="Enter your first name">
+      </div>
+    <div class="mb-3">
+      <!-- <label for="password" class="form-label">Password</label> -->
+      <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password">
+    </div>
+    <div class="mb-3">
+        <!-- <label for="confirmPassword" class="form-label">Confirm Password</label> -->
+        <input type="password" class="form-control" name="password" id="confirmPassword" placeholder="Enter Confirm Password">
+      </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}
